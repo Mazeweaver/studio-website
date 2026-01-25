@@ -1,75 +1,58 @@
-/* Reset & base */
-* {
-  box-sizing: border-box;
-}
-
+/* Layout base */
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top, #1a1a1a, #0d0d0d);
-  color: #f2f2f2;
   min-height: 100vh;
+  background: #0e0e0e;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* Layout */
+/* Center container */
 .container {
-  max-width: 760px;
-  padding: 3.5rem 1.5rem;
-  margin: 0 auto;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 18vh; /* pushes title slightly lower */
 }
 
 /* Game title */
 .game-title {
-  font-size: 3.2rem;
-  margin-bottom: 0.3rem;
-  letter-spacing: -0.02em;
+  font-size: clamp(4rem, 10vw, 7rem); /* ~4x larger */
+  font-weight: 800;
+  text-align: center;
+  margin: 0 0 2rem;
+  letter-spacing: 0.05em;
 }
 
-/* Studio byline */
-.byline {
-  font-size: 0.95rem;
-  opacity: 0.7;
-  margin-bottom: 1.6rem;
+/* Hidden description (kept for later) */
+.hidden {
+  display: none;
 }
 
-.studio-name {
-  font-weight: 600;
-}
-
-/* Description */
-.tagline {
-  font-size: 1.1rem;
-  opacity: 0.85;
-  margin-bottom: 2.8rem;
-}
-
-/* Links */
-.links {
+/* Social icons */
+.socials {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
-.links a {
-  text-decoration: none;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  padding: 0.65rem 1.3rem;
-  border-radius: 999px;
-  transition: all 0.2s ease;
+.socials img {
+  width: 40px;
+  height: 40px;
+  opacity: 0.85;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.links a:hover {
-  background: #ffffff;
-  color: #000000;
-  transform: translateY(-2px);
+.socials img:hover {
+  transform: scale(1.1);
+  opacity: 1;
 }
 
-/* Footer */
-footer {
-  margin-top: 4.5rem;
-  font-size: 0.8rem;
-  opacity: 0.5;
+/* Studio name bottom-right */
+.studio-name {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 2rem;
+  font-size: 0.85rem;
+  opacity: 0.6;
+  letter-spacing: 0.12em;
 }
