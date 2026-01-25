@@ -1,59 +1,75 @@
+/* Reset & base */
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: radial-gradient(circle at top, #1a1a1f, #0b0b0e);
-  color: #f4f4f5;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #1a1a1a, #0d0d0d);
+  color: #f2f2f2;
+  min-height: 100vh;
 }
 
+/* Layout */
 .container {
+  max-width: 760px;
+  padding: 3.5rem 1.5rem;
+  margin: 0 auto;
   text-align: center;
-  max-width: 600px;
-  padding: 2rem;
 }
 
-h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+/* Game title */
+.game-title {
+  font-size: 3.2rem;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.02em;
 }
 
-p {
+/* Studio byline */
+.byline {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  margin-bottom: 1.6rem;
+}
+
+.studio-name {
+  font-weight: 600;
+}
+
+/* Description */
+.tagline {
+  font-size: 1.1rem;
   opacity: 0.85;
-  margin-bottom: 2rem;
+  margin-bottom: 2.8rem;
+}
+
+/* Links */
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .links a {
-  display: inline-block;
-  margin: 0 0.75rem;
   text-decoration: none;
-  color: #a5b4fc;
-  font-weight: 500;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.65rem 1.3rem;
+  border-radius: 999px;
+  transition: all 0.2s ease;
 }
 
 .links a:hover {
+  background: #ffffff;
+  color: #000000;
   transform: translateY(-2px);
-  opacity: 0.8;
 }
 
-.fade-in {
-  animation: fade 1.2s ease forwards;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Footer */
+footer {
+  margin-top: 4.5rem;
+  font-size: 0.8rem;
+  opacity: 0.5;
 }
