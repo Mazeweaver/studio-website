@@ -1,4 +1,13 @@
-/* Base */
+/* =========================
+   Base / Reset
+   ========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -7,7 +16,10 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* Main title */
+/* =========================
+   Main Title
+   ========================= */
+
 .container {
   display: flex;
   justify-content: center;
@@ -18,9 +30,14 @@ body {
   font-size: clamp(4rem, 10vw, 7rem);
   font-weight: 800;
   letter-spacing: 0.06em;
+  text-align: center;
+  margin: 0;
 }
 
-/* Social vertical rail */
+/* =========================
+   Social Vertical Rail
+   ========================= */
+
 .social-rail {
   position: fixed;
   top: 2rem;
@@ -28,10 +45,10 @@ body {
 
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 48px; /* ~½ inch */
 
   padding: 1rem;
-  background: #3f4f5f;
+  background: #3f4f5f; /* darker than page */
   border-radius: 16px;
 
   width: fit-content;
@@ -41,7 +58,6 @@ body {
 .social-rail a {
   width: 32px;
   height: 32px;
-
   display: block;
 }
 
@@ -49,16 +65,53 @@ body {
   width: 100%;
   height: 100%;
   display: block;
+  opacity: 0.9;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* Studio name bottom-right */
+.social-rail img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* =========================
+   Studio Name (Bottom Right)
+   ========================= */
+
 .studio-name {
   position: fixed;
   bottom: 2rem;
   right: 2.5rem;
+
   font-size: 4rem; /* ~5x larger */
   font-weight: 700;
   letter-spacing: 0.15em;
+
   opacity: 0.35;
   text-align: right;
+}
+
+/* =========================
+   Responsive Adjustments
+   ========================= */
+
+@media (max-width: 768px) {
+  .game-title {
+    font-size: clamp(3rem, 12vw, 5rem);
+  }
+
+  .studio-name {
+    font-size: 2.5rem;
+  }
+
+  .social-rail {
+    top: 1.5rem;
+    left: 1.5rem;
+    gap: 32px;
+  }
+
+  .social-rail a {
+    width: 28px;
+    height: 28px;
+  }
 }
