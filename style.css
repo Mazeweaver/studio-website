@@ -12,6 +12,19 @@ body {
   overflow: hidden;
 }
 
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background-image: url("noise.png");
+  opacity: 0.06; /* VERY subtle */
+  mix-blend-mode: overlay;
+
+  z-index: 1;
+}
+
 @keyframes fadeUp {
   from {
     opacity: 0;
