@@ -96,10 +96,14 @@ body::after {
   height: 100%;
   display: block;
   opacity: 0.85;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    filter 0.2s ease;
 }
 
 .socials img:hover {
   transform: scale(1.15);
   opacity: 1;
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.35));
 }
