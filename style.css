@@ -27,23 +27,27 @@ body {
   left: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 48px; /* ~½ inch */
+  align-items: center;
+  gap: 48px;
   padding: 1.2rem;
-  background: #3f4f5f; /* darker than page */
+  background: #3f4f5f;
   border-radius: 16px;
+  width: auto;
+  height: auto;
 }
 
 /* Icon sizing */
+.social-rail a {
+  display: block;
+}
+
 .social-rail img {
   width: 40px;
   height: 40px;
-  opacity: 0.9;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.social-rail img:hover {
-  transform: scale(1.1);
-  opacity: 1;
+  max-width: 40px;
+  max-height: 40px;
+  flex-shrink: 0;
+  object-fit: contain;
 }
 
 /* Studio name bottom-right */
