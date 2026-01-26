@@ -1,117 +1,72 @@
-/* =========================
-   Base / Reset
-   ========================= */
-
-*,
-*::before,
-*::after {
+/* Reset */
+* {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  min-height: 100vh;
-  background: #6f7f8f; /* grayish blue */
-  color: #ffffff;
+  height: 100vh;
+  background: #5f6f7e;
+  color: #f2f4f6;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: hidden;
 }
 
-/* =========================
-   Main Title
-   ========================= */
-
-.container {
-  display: flex;
-  justify-content: center;
-  padding-top: 18vh;
-}
-
+/* Game title */
 .game-title {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   font-size: clamp(4rem, 10vw, 7rem);
   font-weight: 800;
-  letter-spacing: 0.06em;
-  text-align: center;
+  letter-spacing: 0.08em;
   margin: 0;
+  text-align: center;
 }
 
-/* =========================
-   Social Vertical Rail
-   ========================= */
+/* Studio name */
+.studio-name {
+  position: absolute;
+  bottom: 2rem;
+  right: 2.5rem;
 
-.social-rail {
-  position: fixed;
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  opacity: 0.5;
+}
+
+/* Social icons container */
+.socials {
+  position: absolute;
   top: 2rem;
   left: 2rem;
 
   display: flex;
   flex-direction: column;
-  gap: 48px; /* ~½ inch */
+  gap: 40px;
 
   padding: 1rem;
-  background: #3f4f5f; /* darker than page */
-  border-radius: 16px;
-
-  width: fit-content;
-  height: fit-content;
+  background: #2f3e4e;
+  border-radius: 14px;
 }
 
-.social-rail a {
+/* Icon sizing (locked) */
+.socials a {
   width: 32px;
   height: 32px;
-  display: block;
 }
 
-.social-rail img {
+.socials img {
   width: 100%;
   height: 100%;
   display: block;
-  opacity: 0.9;
+  opacity: 0.85;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.social-rail img:hover {
-  transform: scale(1.1);
+.socials img:hover {
+  transform: scale(1.15);
   opacity: 1;
-}
-
-/* =========================
-   Studio Name (Bottom Right)
-   ========================= */
-
-.studio-name {
-  position: fixed;
-  bottom: 2rem;
-  right: 2.5rem;
-
-  font-size: 4rem; /* ~5x larger */
-  font-weight: 700;
-  letter-spacing: 0.15em;
-
-  opacity: 0.35;
-  text-align: right;
-}
-
-/* =========================
-   Responsive Adjustments
-   ========================= */
-
-@media (max-width: 768px) {
-  .game-title {
-    font-size: clamp(3rem, 12vw, 5rem);
-  }
-
-  .studio-name {
-    font-size: 2.5rem;
-  }
-
-  .social-rail {
-    top: 1.5rem;
-    left: 1.5rem;
-    gap: 32px;
-  }
-
-  .social-rail a {
-    width: 28px;
-    height: 28px;
-  }
 }
