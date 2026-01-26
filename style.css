@@ -1,48 +1,47 @@
-/* Layout base */
+/* Base */
 body {
   margin: 0;
   min-height: 100vh;
-  background: #0e0e0e;
+  background: #6f7f8f; /* grayish blue */
   color: #ffffff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* Center container */
+/* Main title */
 .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 18vh; /* pushes title slightly lower */
+  justify-content: center;
+  padding-top: 18vh;
 }
 
-/* Game title */
 .game-title {
-  font-size: clamp(4rem, 10vw, 7rem); /* ~4x larger */
+  font-size: clamp(4rem, 10vw, 7rem);
   font-weight: 800;
-  text-align: center;
-  margin: 0 0 2rem;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
-/* Hidden description (kept for later) */
-.hidden {
-  display: none;
-}
-
-/* Social icons */
-.socials {
+/* Social vertical rail */
+.social-rail {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+  gap: 48px; /* ~½ inch */
+  padding: 1.2rem;
+  background: #3f4f5f; /* darker than page */
+  border-radius: 16px;
 }
 
-.socials img {
+/* Icon sizing */
+.social-rail img {
   width: 40px;
   height: 40px;
-  opacity: 0.85;
+  opacity: 0.9;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.socials img:hover {
+.social-rail img:hover {
   transform: scale(1.1);
   opacity: 1;
 }
@@ -50,9 +49,11 @@ body {
 /* Studio name bottom-right */
 .studio-name {
   position: fixed;
-  bottom: 1.5rem;
-  right: 2rem;
-  font-size: 0.85rem;
-  opacity: 0.6;
-  letter-spacing: 0.12em;
+  bottom: 2rem;
+  right: 2.5rem;
+  font-size: 4rem; /* ~5x larger */
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  opacity: 0.35;
+  text-align: right;
 }
