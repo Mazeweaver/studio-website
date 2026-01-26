@@ -25,6 +25,13 @@ body::after {
   z-index: 1;
 }
 
+.game-title,
+.studio-name,
+.socials {
+  position: relative;
+  z-index: 2;
+}
+
 @keyframes fadeUp {
   from {
     opacity: 0;
