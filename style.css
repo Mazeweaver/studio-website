@@ -110,7 +110,7 @@ body::after {
   left: 50%;
   transform: translateX(-50%);
 
-  width: clamp(420px, 60vw, 900px);
+  width: clamp(380px, 50vw, 750px);
   height: auto;
 
   animation: fadeUp 1.2s ease-out forwards;
