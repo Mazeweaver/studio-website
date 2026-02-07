@@ -106,7 +106,7 @@ body::after {
 /* Game title image — positioned toward bottom */
 .game-title {
   position: absolute;
-  bottom: 12%;   /* controls how far up from bottom it sits */
+  bottom: 10%;   /* controls how far up from bottom it sits */
   left: 50%;
   transform: translateX(-50%);
 
