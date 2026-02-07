@@ -103,50 +103,20 @@ body::after {
    GAME TITLE
    ========================================================= */
 
+/* Game title image */
 .game-title {
-  position: relative; /* REQUIRED for shimmer */
-  overflow: hidden; /* prevents shimmer spill */
-  top: 40%;
+  position: absolute;
+  top: 40%; /* slightly higher than center like you requested */
   left: 50%;
-  transform:
-    translate(-50%, -50%)
-    scaleX(0.88)
-    scaleY(1.2);
+  transform: translate(-50%, -50%);
 
-  font-size: clamp(4rem, 10vw, 7rem);
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  margin: 0;
-  text-align: center;
-
-  /* Glow */
-  text-shadow:
-    0 0 12px rgba(255, 255, 255, 0.25),
-    0 0 32px rgba(180, 210, 255, 0.18);
+  width: clamp(420px, 60vw, 900px);
+  height: auto;
 
   animation: fadeUp 1.2s ease-out forwards;
-}
 
-/* SHIMMER LAYER */
-.game-title::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background: linear-gradient(
-    120deg,
-    transparent 20%,
-    rgba(255, 255, 255, 0.35) 40%,
-    transparent 60%
-  );
-
-  mix-blend-mode: overlay;
-  opacity: 0.25;
-
-  transform: translateX(-120%);
-  animation: shimmer 8s ease-in-out infinite;
-
-  pointer-events: none;
+  z-index: 2;
+  pointer-events: none; /* prevents accidental hover issues */
 }
 
 /* =========================================================
@@ -207,5 +177,11 @@ body::after {
   transform: scale(1.12);
   opacity: 1;
   filter: drop-shadow(0 0 12px rgba(255,255,255,0.4));
+}
+
+/* SEO Hidden */
+.seo-hidden {
+  position: absolute;
+  left: -9999px;
 }
 
