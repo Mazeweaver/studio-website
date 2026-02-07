@@ -103,12 +103,12 @@ body::after {
    GAME TITLE
    ========================================================= */
 
-/* Game title image */
+/* Game title image — positioned toward bottom */
 .game-title {
   position: absolute;
-  top: 40%; /* slightly higher than center like you requested */
+  bottom: 18%;   /* controls how far up from bottom it sits */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 
   width: clamp(420px, 60vw, 900px);
   height: auto;
@@ -116,7 +116,7 @@ body::after {
   animation: fadeUp 1.2s ease-out forwards;
 
   z-index: 2;
-  pointer-events: none; /* prevents accidental hover issues */
+  pointer-events: none;
 }
 
 /* =========================================================
