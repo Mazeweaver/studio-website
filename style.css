@@ -139,11 +139,12 @@ body::after {
 
 /* Wishlist label above Steam icon */
 .wishlist-text {
-  font-size: 0.75rem;
-  letter-spacing: 0.15em;
+  font-size: 0.95rem;   /* bigger */
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   text-align: center;
-  opacity: 0.7;
+  font-weight: 600;
+  opacity: 0.9;
 }
 
 /* Steam / Store container (top right) */
@@ -156,7 +157,7 @@ body::after {
   flex-direction: column;
   gap: 48px;
 
-  padding: 1.25rem;
+  padding: 1.4rem 1.6rem; /* bigger container */
   background: #2f3e4e;
   border-radius: 16px;
   backdrop-filter: blur(6px); /* Blur Effect */
@@ -167,8 +168,8 @@ body::after {
 
 /* Icon sizing */
 .store-links a {
-  width: 44px;
-  height: 44px;
+  width: 64px;
+  height: 64px;
 }
 
 .store-links img {
