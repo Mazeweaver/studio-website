@@ -222,6 +222,7 @@ body::after {
   height: 100%;
   display: block;
   opacity: 0.85;
+  filter: invert(1);
 
   transition:
     transform 0.2s ease,
@@ -232,7 +233,7 @@ body::after {
 .socials img:hover {
   transform: scale(1.12);
   opacity: 1;
-  filter: drop-shadow(0 0 12px rgba(255,255,255,0.4));
+  filter: invert(1) drop-shadow(0 0 12px rgba(255,255,255,0.4));
 }
 
 /* SEO Hidden */
