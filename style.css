@@ -151,7 +151,7 @@ body::after {
 /* Steam / Store container (top right) */
 .store-links {
   position: absolute;
-  top: 2rem;
+  top: 1rem;
   right: 2rem;
 
   display: flex;
@@ -173,7 +173,7 @@ body::after {
   width: 180px;
   height: 180px;
   display: block;
-  margin-top: -20px; /* pull icon up, adjust value to taste */
+  margin-top: -40px; /* pull icon up, adjust value to taste */
 }
 
 .store-links img {
