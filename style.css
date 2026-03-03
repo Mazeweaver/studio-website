@@ -155,21 +155,23 @@ body::after {
 
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  align-items: center;
+  gap: 16px;
 
-  padding: 1.4rem 1.6rem; /* bigger container */
+  padding: 1.4rem 1.6rem;
   background: #2f3e4e;
   border-radius: 16px;
-  backdrop-filter: blur(6px); /* Blur Effect */
-  border: 1px solid rgba(255,255,255,0.08); /* Container Border */ 
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.08);
 
   z-index: 2;
 }
 
 /* Icon sizing */
 .store-links a {
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
+  display: block; 
 }
 
 .store-links img {
