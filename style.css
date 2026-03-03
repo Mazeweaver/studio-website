@@ -137,6 +137,15 @@ body::after {
    SOCIAL ICONS
    ========================================================= */
 
+/* Wishlist label above Steam icon */
+.wishlist-text {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0.7;
+}
+
 /* Steam / Store container (top right) */
 .store-links {
   position: absolute;
