@@ -160,7 +160,7 @@ body::after {
 
   padding: 1rem 1.2rem;
   background: #2f3e4e;
-  border-radius: 16px;
+  border-radius: 12px;
   backdrop-filter: blur(6px);
   border: 1px solid rgba(255,255,255,0.08);
 
